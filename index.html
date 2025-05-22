@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Federico Castiglione - CV</title>
+  <title>Federico Castiglione - Ingeniero de Software</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <style>
     :root {
       --bg: #f4f7fa;
       --paper: #ffffff;
       --text: #333333;
+      --text-light: #555555;
       --accent: #21c997;
+      /* Verde menta fresco */
       --highlight: #ff6e67;
+      /* Coral vibrante */
+      --primary-dark: #2c3e50;
+      /* Azul noche para títulos principales */
     }
 
     * {
@@ -27,71 +32,147 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       padding: 2rem;
+      font-size: 16px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
+      /* Un poco más de espacio */
       margin: auto;
       background: var(--paper);
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      /* Bordes más suaves */
+      padding: 2.5rem;
+      /* Más padding interno */
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      /* Sombra más sutil */
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     header h1 {
       font-family: 'Source Code Pro', monospace;
+      color: var(--primary-dark);
+      font-size: 2.5rem;
+      /* Un poco más grande */
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    header .subtitle {
+      font-family: 'Inter', sans-serif;
       color: var(--accent);
-      font-size: 2.25rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
-    header p {
-      margin-top: 0.5rem;
-      font-weight: 300;
-      font-size: 1.1rem;
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 0.95rem;
     }
 
-    section+section {
-      margin-top: 1.5rem;
+    .contact-info a {
+      color: var(--highlight);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      /* Quitado el section + section para control individual */
+      margin-bottom: 2rem;
     }
 
     h2 {
       font-family: 'Source Code Pro', monospace;
-      color: var(--highlight);
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+      color: var(--primary-dark);
+      font-size: 1.6rem;
+      /* Ligeramente más grande */
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
       border-bottom: 3px solid var(--accent);
       display: inline-block;
     }
 
     ul {
       list-style: none;
-      margin-top: 0.5rem;
-      padding-left: 1rem;
+      /* Se mantiene sin bullets por defecto */
+      padding-left: 0;
+      /* Quitamos padding si no usamos bullets custom */
     }
 
-    li {
+    /* Estilo para listas con bullets más atractivos */
+    .bullet-list li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+      margin-bottom: 0.6rem;
+    }
+
+    .bullet-list li::before {
+      content: "▹";
+      /* o "•", "▸", "✓" */
+      color: var(--accent);
+      font-weight: bold;
+      display: inline-block;
+      width: 1.5em;
+      font-size: 1.2em;
+    }
+
+    .job {
+      margin-bottom: 1.5rem;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: var(--text);
+      font-size: 1.15rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .job .company-dates {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
+    .job .company-dates .company {
+      color: var(--highlight);
+    }
+
+    .skills-category {
+      margin-bottom: 0.75rem;
+    }
+
+    .skills-category strong {
+      color: var(--primary-dark);
     }
 
     .quote {
       font-style: italic;
-      margin-top: 1rem;
-      padding-left: 1rem;
-      border-left: 4px solid var(--accent);
-      color: var(--text);
+      margin-top: 2rem;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid var(--accent);
+      background-color: #f9f9f9;
+      /* Fondo sutil para la cita */
+      color: var(--text-light);
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -99,41 +180,89 @@
 <body>
   <div class="container">
     <header>
-      <h1>¡Hola! Soy Federico Castiglione 👋</h1>
-      <p>Soy <strong>Ingeniero en Software</strong> y actualmente trabajo como <strong>Senior Software Engineer en
-          Mercado Libre</strong>, con base en San Juan, Argentina.</p>
-      <p>Me apasiona crear soluciones que resuelvan problemas reales, trabajar en equipo y aprender algo nuevo todos los
-        días. Soy curioso, comprometido y siempre busco mejorar tanto en lo técnico como en lo humano.</p>
+      <h1>Federico Castiglione</h1>
+      <p class="subtitle">Senior Software Engineer | Java | Node.js | AWS | Microservicios</p>
+      <div class="contact-info">
+        San Juan, Argentina | Abierto a Trabajo Remoto Global<br>
+        <a href="mailto:feder102@gmail.com">feder102@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/fedecastiglione/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/feder102" target="_blank">GitHub</a> <!-- ¡Actualiza esto! -->
+      </div>
     </header>
 
-    <section>
-      <h2>🚀 Experiencia y Tecnologías</h2>
-      <ul>
-        <li>Desarrollo backend y full-stack con enfoque en APIs escalables y mantenibles.</li>
-        <li>Java (1.8 a 17), Python, JavaScript, Node.js, PHP, Dart (Flutter), .NET, C, C++.</li>
-        <li>Frameworks: Spring Boot, CakePHP, y más.</li>
-        <li>Bases de datos: PostgreSQL, MySQL, MS SQL Server.</li>
-        <li>Automatización con Docker, Docker Compose y herramientas de CI/CD.</li>
-        <li>Conocimientos avanzados de Linux y herramientas en la nube como BigQuery.</li>
+    <section id="acerca-de-mi">
+      <h2>👋 Acerca de mí</h2>
+      <header>
+        <p>Soy <strong>Ingeniero en Software</strong> y actualmente trabajo como <strong>Senior Software Engineer en
+            Mercado Libre</strong>, con base en San Juan, Argentina.</p>
+        <p>Me apasiona crear soluciones que resuelvan problemas reales, trabajar en equipo y aprender algo nuevo todos
+          los
+          días. Soy curioso, comprometido y siempre busco mejorar tanto en lo técnico como en lo humano.</p>
+      </header>
+    </section>
+
+    <section id="habilidades">
+      <h2>🛠️ Habilidades Técnicas</h2>
+      <ul class="bullet-list">
+        <li class="skills-category"><strong>Lenguajes de Programación:</strong> Java (8 a 17+), Python, Node.js
+          (JavaScript/TypeScript), PHP, Dart, Go (básico).</li>
+        <li class="skills-category"><strong>Frameworks y Librerías:</strong> Spring Boot, Express.js, React, Flutter,
+          CakePHP, JUnit, Mockito.</li>
+        <li class="skills-category"><strong>Bases de Datos:</strong> PostgreSQL, MySQL, MS SQL Server, MongoDB, Redis.
+        </li>
+        <li class="skills-category"><strong>Cloud & DevOps:</strong> AWS (EC2, S3, Lambda, SQS, SNS - *especifica los
+          que usas*), Docker, Docker Compose, Kubernetes (básico), Jenkins, GitLab CI, Terraform (básico).</li>
+        <li class="skills-category"><strong>Herramientas y Otros:</strong> Git, Linux, BigQuery, Jira, Confluence,
+          Metodologías Ágiles (Scrum, Kanban).</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🛠️ Proyectos Destacados</h2>
-      <ul>
-        <li>Herramientas de automatización personal (organizadores, dashboards, scripts).</li>
-        <li>Proyectos de integración y mejora de procesos cotidianos.</li>
-        <li>Experiencia en sistemas académicos como SIU-Guaraní y entornos universitarios.</li>
+    <section id="experiencia">
+      <h2>🚀 Experiencia Profesional</h2>
+      <div class="job">
+        <h3>Senior Software Engineer</h3>
+        <p class="company-dates"><span class="company">@ Mercado Libre</span> | [Mes Año Inicio] – Actualidad | San
+          Juan, Argentina</p>
+        <ul class="bullet-list">
+          <li>Diseño, desarrollo y mantenimiento de microservicios de alto rendimiento para el team de Replenishment
+            utilizando Java, Spring Boot y otras.</li>
+          <li>Liderazgo de proyectos en iniciativas cross.</li>
+          <li>Colaboración con equipos multidisciplinarios (Producto, UX, QA) en un entorno ágil para la entrega
+            continua de valor.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Full Stack Developer</h3>
+        <p class="company-dates"><span class="company">@ Freelance</span> | Enero 2019 – Noviembre 2020</p>
+        <ul class="bullet-list">
+          <li>Desarrollo de sitios web y aplicaciones personalizadas para diversos clientes (Node.js, React, PHP).</li>
+          <li>Gestión integral de proyectos, desde la toma de requerimientos hasta la entrega y soporte.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="educacion">
+      <h2>🎓 Educación</h2>
+      <div class="job"> <!-- Reutilizo la clase para consistencia, aunque no sea un "job" -->
+        <h3>Ingeniería en Software</h3>
+        <p class="company-dates"><span class="company">Universidad Nacional de San Juan </span> | San Juan, Argentina –
+          2017</p>
+        <!-- Puedes añadir alguna mención especial si la tienes: proyecto final destacado, promedio, etc. -->
+      </div>
+    </section>
+
+    <section id="idiomas">
+      <h2>🌐 Idiomas</h2>
+      <ul class="bullet-list">
+        <li><strong>Español:</strong> Nativo</li>
+        <li><strong>Inglés:</strong> Básico</li>
       </ul>
     </section>
 
-    <section>
-      <h2>📬 Contacto</h2>
-      <p>¿Querés conectar o colaborar? Escribime: <a href="mailto:feder102@gmail.com">feder102@gmail.com</a></p>
-    </section>
 
     <div class="quote">
-      “Programo como vivo: con alegría, foco y ganas de mejorar siempre.”
+      <p>“Programo como vivo: con alegría, foco y ganas de mejorar siempre.”</p>
     </div>
   </div>
 </body>
