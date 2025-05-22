@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Federico Castiglione - CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pbIY+Y+Yd4JuNf2KL+Y6G2jzAy5ajk5k37YRZq16WcU1LZ8OL7Oy+vkFo1aWEsQ0nY07qgTw+fxdT7a1rbvMRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@600&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
-      --bg-light: #f4f7fa;
-      --paper-light: #ffffff;
-      --text-light: #333333;
-      --bg-dark: #1e1e2e;
-      --paper-dark: #28293d;
-      --text-dark: #e0e0e0;
-      --accent: #61dafb;
-      --highlight: #ff79c6;
+      --bg: #f4f7fa;
+      --paper: #ffffff;
+      --text: #333333;
+      --accent: #21c997;
+      --highlight: #ff6e67;
     }
-    [data-theme="light"] {
-      --bg: var(--bg-light);
-      --paper: var(--paper-light);
-      --text: var(--text-light);
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    [data-theme="dark"] {
-      --bg: var(--bg-dark);
-      --paper: var(--paper-dark);
-      --text: var(--text-dark);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       padding: 2rem;
-      transition: background 0.3s, color 0.3s;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
       background: var(--paper);
       border-radius: 8px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: background 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: var(--accent);
-      z-index: 10;
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    header { text-align: center; margin-bottom: 2rem; }
+
     header h1 {
       font-family: 'Source Code Pro', monospace;
       color: var(--accent);
       font-size: 2.25rem;
     }
-    header p { margin-top: 0.5rem; font-weight: 300; font-size: 1.1rem; }
-    section + section { margin-top: 1.5rem; }
+
+    header p {
+      margin-top: 0.5rem;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    section+section {
+      margin-top: 1.5rem;
+    }
+
     h2 {
       font-family: 'Source Code Pro', monospace;
       color: var(--highlight);
@@ -71,11 +69,23 @@
       border-bottom: 3px solid var(--accent);
       display: inline-block;
     }
-    .stack { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
-    .stack i { font-size: 2rem; color: var(--accent); }
-    ul { list-style: none; margin-top: 0.5rem; padding-left: 1rem; }
-    li { margin-bottom: 0.5rem; }
-    .contact a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    ul {
+      list-style: none;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
     .quote {
       font-style: italic;
       margin-top: 1rem;
@@ -83,55 +93,37 @@
       border-left: 4px solid var(--accent);
       color: var(--text);
     }
-    .pdf-btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s;
-      text-decoration: none;
-    }
-    .pdf-btn:hover { background: var(--highlight); }
   </style>
 </head>
-<body data-theme="light">
-  <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+
+<body>
   <div class="container">
     <header>
       <h1>¡Hola! Soy Federico Castiglione 👋</h1>
-      <p>Soy <strong>Ingeniero en Software</strong> y actualmente trabajo como <strong>Senior Software Engineer en Mercado Libre</strong>, con base en San Juan, Argentina.</p>
-      <p>Me apasiona crear soluciones que resuelvan problemas reales, trabajar en equipo y aprender algo nuevo todos los días.</p>
+      <p>Soy <strong>Ingeniero en Software</strong> y actualmente trabajo como <strong>Senior Software Engineer en
+          Mercado Libre</strong>, con base en San Juan, Argentina.</p>
+      <p>Me apasiona crear soluciones que resuelvan problemas reales, trabajar en equipo y aprender algo nuevo todos los
+        días. Soy curioso, comprometido y siempre busco mejorar tanto en lo técnico como en lo humano.</p>
     </header>
 
     <section>
       <h2>🚀 Experiencia y Tecnologías</h2>
       <ul>
-        <li>Desarrollo backend y full-stack con APIs escalables.</li>
-        <li>Frameworks: Spring Boot, CakePHP, Node.js.</li>
-        <li>CI/CD: Docker, Docker Compose, GitHub Actions.</li>
+        <li>Desarrollo backend y full-stack con enfoque en APIs escalables y mantenibles.</li>
+        <li>Java (1.8 a 17), Python, JavaScript, Node.js, PHP, Dart (Flutter), .NET, C, C++.</li>
+        <li>Frameworks: Spring Boot, CakePHP, y más.</li>
+        <li>Bases de datos: PostgreSQL, MySQL, MS SQL Server.</li>
+        <li>Automatización con Docker, Docker Compose y herramientas de CI/CD.</li>
+        <li>Conocimientos avanzados de Linux y herramientas en la nube como BigQuery.</li>
       </ul>
-      <div class="stack">
-        <i class="fab fa-java" title="Java"></i>
-        <i class="fab fa-python" title="Python"></i>
-        <i class="fab fa-js" title="JavaScript"></i>
-        <i class="fab fa-php" title="PHP"></i>
-        <i class="fab fa-docker" title="Docker"></i>
-        <i class="fas fa-database" title="PostgreSQL/MySQL"></i>
-        <i class="fab fa-github" title="GitHub"></i>
-      </div>
     </section>
 
     <section>
       <h2>🛠️ Proyectos Destacados</h2>
       <ul>
-        <li>Scripts y dashboards de automatización personal.</li>
-        <li>Integración y optimización de procesos diarios.</li>
-        <li>Sistemas académicos: SIU-Guaraní y gestión universitaria.</li>
+        <li>Herramientas de automatización personal (organizadores, dashboards, scripts).</li>
+        <li>Proyectos de integración y mejora de procesos cotidianos.</li>
+        <li>Experiencia en sistemas académicos como SIU-Guaraní y entornos universitarios.</li>
       </ul>
     </section>
 
@@ -140,39 +132,10 @@
       <p>¿Querés conectar o colaborar? Escribime: <a href="mailto:feder102@gmail.com">feder102@gmail.com</a></p>
     </section>
 
-    <div class="quote">“Programo como vivo: con alegría, foco y ganas de mejorar siempre.”</div>
-
-    <button class="pdf-btn" id="downloadPDF">📄 Descargar PDF</button>
+    <div class="quote">
+      “Programo como vivo: con alegría, foco y ganas de mejorar siempre.”
+    </div>
   </div>
-
-  <!-- html2canvas needed by jsPDF html plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNa5H7K3jmh4dDYt/DqkOkpT/E4TfInIMsG0uwPYR6E2HgOzG93KZrwXg6sREzQ+GEj6VfEE1mZFjhk8HU+img==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- jsPDF html plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-YkdMrxE/QDcE1kIeMx0F80fkdLEbS0M9TzYAxGqZ30zgpJKgUzsa2nl87a/mCoDR57LUl1sNN2wGcNVsSjT8rw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    // Theme toggle
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      const body = document.body;
-      const icon = toggle.querySelector('i');
-      const theme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      body.setAttribute('data-theme', theme);
-      icon.classList.toggle('fa-moon');
-      icon.classList.toggle('fa-sun');
-    });
-    // PDF generation
-    document.getElementById('downloadPDF').addEventListener('click', () => {
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({ unit: 'pt', format: 'letter' });
-      doc.html(document.querySelector('.container'), {
-        callback: function (pdf) {
-          pdf.save('CV-Federico-Castiglione.pdf');
-        },
-        x: 20,
-        y: 20,
-        html2canvas: { scale: 0.5 }
-      });
-    });
-  </script>
 </body>
+
 </html>
