@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #1e1e2e;
-      --paper: #28293d;
-      --text: #e0e0e0;
-      --accent: #61dafb;
-      --highlight: #ff79c6;
+      --bg: #f4f7fa;
+      --paper: #ffffff;
+      --text: #333333;
+      --accent: #21c997;
+      --highlight: #ff6e67;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -27,7 +27,7 @@
       background: var(--paper);
       border-radius: 8px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     header {
       text-align: center;
@@ -36,11 +36,12 @@
     header h1 {
       font-family: 'Source Code Pro', monospace;
       color: var(--accent);
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
     header p {
       margin-top: 0.5rem;
       font-weight: 300;
+      font-size: 1.1rem;
     }
     section + section {
       margin-top: 1.5rem;
@@ -49,13 +50,14 @@
       font-family: 'Source Code Pro', monospace;
       color: var(--highlight);
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent);
+      margin-bottom: 0.75rem;
+      border-bottom: 3px solid var(--accent);
       display: inline-block;
     }
     ul {
       list-style: none;
       margin-top: 0.5rem;
+      padding-left: 1rem;
     }
     li {
       margin-bottom: 0.5rem;
@@ -65,85 +67,52 @@
       text-decoration: none;
       font-weight: 600;
     }
-    .skills span {
-      display: inline-block;
-      background: var(--accent);
-      color: #1e1e2e;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      margin: 0.25rem;
-      font-size: 0.9rem;
+    .quote {
+      font-style: italic;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 4px solid var(--accent);
+      color: var(--text);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Federico Castiglione</h1>
-      <p>Senior Software Engineer | San Juan, Argentina</p>
-      <p class="contact">
-        <a href="mailto:fcastiglione@example.com">fcastiglione@example.com</a> &#124;
-        <a href="https://github.com/feder102" target="_blank">github.com/feder102</a> &#124;
-        <a href="https://linkedin.com/in/fedecastiglione" target="_blank">linkedin.com/in/fedecastiglione</a>
-      </p>
+      <h1>¡Hola! Soy Federico Castiglione 👋</h1>
+      <p>Soy <strong>Ingeniero en Software</strong> y actualmente trabajo como <strong>Senior Software Engineer en Mercado Libre</strong>, con base en San Juan, Argentina.</p>
+      <p>Me apasiona crear soluciones que resuelvan problemas reales, trabajar en equipo y aprender algo nuevo todos los días. Soy curioso, comprometido y siempre busco mejorar tanto en lo técnico como en lo humano.</p>
     </header>
 
     <section>
-      <h2>Perfil</h2>
-      <p>Ingeniero de Software con +6 años de experiencia en desarrollo backend y frontend. Apasionado por la automatización, bots de trading y soluciones escalables en entornos remotos.</p>
-    </section>
-
-    <section>
-      <h2>Experiencia</h2>
+      <h2>🚀 Experiencia y Tecnologías</h2>
       <ul>
-        <li>
-          <strong>Mercado Libre</strong> (Remoto) — Senior Software Engineer<br />
-          <em>Mar 2020 – Presente</em>
-          <ul>
-            <li>Lideré pipelines de datos para extracción de transacciones (PDF→CSV), +25% precisión.</li>
-            <li>Desarrollé bot de trading en Python con métricas de riesgo (Sharpe, drawdown).</li>
-            <li>Automatización de pagos y registro de servicios usando Google Colab.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Empresa Anterior</strong> — Software Engineer<br />
-          <em>Ene 2017 – Feb 2020</em>
-          <ul>
-            <li>Microservicios en Java/Spring Boot para e-commerce con Mercado Pago.</li>
-            <li>CI/CD con GitHub Actions y Docker, -40% en despliegues.</li>
-          </ul>
-        </li>
+        <li>Desarrollo backend y full-stack con enfoque en APIs escalables y mantenibles.</li>
+        <li>Java (1.8 a 17), Python, JavaScript, Node.js, PHP, Dart (Flutter), .NET, C, C++.</li>
+        <li>Frameworks: Spring Boot, CakePHP, y más.</li>
+        <li>Bases de datos: PostgreSQL, MySQL, MS SQL Server.</li>
+        <li>Automatización con Docker, Docker Compose y herramientas de CI/CD.</li>
+        <li>Conocimientos avanzados de Linux y herramientas en la nube como BigQuery.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Proyectos</h2>
+      <h2>🛠️ Proyectos Destacados</h2>
       <ul>
-        <li><strong>Bot de Ofertas</strong>: Scraper Python para 5 ofertas diarias en Telegram y Twitter.</li>
-        <li><strong>Portafolio One-page</strong>: HTML/CSS/JS en GitHub Pages.</li>
-        <li><strong>Planning Europa</strong>: Google Sheets + Notion para presupuestos y calendarios.</li>
+        <li>Herramientas de automatización personal (organizadores, dashboards, scripts).</li>
+        <li>Proyectos de integración y mejora de procesos cotidianos.</li>
+        <li>Experiencia en sistemas académicos como SIU-Guaraní y entornos universitarios.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Habilidades</h2>
-      <div class="skills">
-        <span>Python</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>Docker</span><span>CI/CD</span><span>Web Scraping</span>
-      </div>
+      <h2>📬 Contacto</h2>
+      <p>¿Querés conectar o colaborar? Escribime: <a href="mailto:feder102@gmail.com">feder102@gmail.com</a></p>
     </section>
 
-    <section>
-      <h2>Educación</h2>
-      <p><strong>Ing. Informática</strong> — Universidad Nacional de San Juan (2012–2016)</p>
-    </section>
-
-    <section>
-      <h2>Idiomas</h2>
-      <ul>
-        <li>Español (Nativo)</li>
-        <li>Inglés (Avanzado)</li>
-      </ul>
-    </section>
+    <div class="quote">
+      “Programo como vivo: con alegría, foco y ganas de mejorar siempre.”
+    </div>
   </div>
 </body>
 </html>
